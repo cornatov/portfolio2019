@@ -18,5 +18,3 @@
 //= require jquery.stellar.min
 //= require jquery.countTo
 //= require main
-
-
