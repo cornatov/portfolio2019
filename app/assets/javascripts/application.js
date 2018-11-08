@@ -10,11 +10,13 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require rails-ujs
+//= require turbolinks
+//= require_tree .
 
-//= require jquery.min
-//= require jquery.easing.1.3
-//= require bootstrap-sprockets
-//= require jquery.waypoints.min
-//= require jquery.stellar.min
-//= require jquery.countTo
-//= require main
+/* affix the navbar after scroll below header */
+$('nav').affix({
+      offset: {
+        top: $('#services').offset().top
+      }
+});	
