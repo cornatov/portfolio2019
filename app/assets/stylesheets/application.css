@@ -365,7 +365,18 @@ nav .navbar-brand {
 }
 
 
-code { 
-    font-family: monospace;
-    background-color: black;
+pre, code{
+     direction: ltr;
+     text-align: left;
 }
+pre {border: solid 1px black;
+     font-size: 1.3 em; 
+     color: blue; 
+     margin-left:250px;
+     margin-right:250px;
+     margin-bottom:250px; 
+      
+     
+     background: black}
+code {font-size:1.2em; 
+     color: #008099}

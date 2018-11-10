@@ -135,7 +135,7 @@
 <!--row-->
 <div class="titles">The following are websites I made:</div>
 
-<<div class="row">
+<div class="row">
     
 
 <div class="col-md-3 col-xs-12">
@@ -175,40 +175,131 @@
 <div class="titles">Below is some Python 3.6 script:</div>
 </div> <!-- col -->
 <div class="col-md-12 col-xs-12">
-<code># https://www.rithmschool.com/blog
 
+<div class="contact">The example below is off a web scrapper that returns dad jokes based of what the user inputs as a keyword</div>
+<pre><code>
+import requests
+from random import choice 
+from termcolor import colored 
+import pyfiglet
+# Importing modules at top
+
+header = pyfiglet.figlet_format("Dad Joke Generator")
+header = colored(header, color = "green", on_color = "on_red", attrs=['blink'])
+print(header)
+# Title goes here
+
+
+user_input = input("What would you like to search for? ")
+# The term takes what the person is searching for and input into the 
+# url search parameter e.g flower or dog and looks to find dad jokes 
+# that contain a flower or a dog
+
+url = "https://icanhazdadjoke.com/search"
+#website that we are scrapping, specifically the search button within the website 
+#which we are inputting the user's keyword
+
+
+respones = requests.get(url, headers = {"Accept": "application/json"}, params = {"term": user_input}).json()
+# The Json request simplifies the return so that it is not a bunch of html but just the key and value pairs 
+#aka dict
+
+number_of_jokes = respones["total_jokes"]
+# Only prints the number of jokes avilable for that searched topic
+
+results = respones["results"] 
+
+
+if number_of_jokes > 1:
+	print(f"There are {number_of_jokes} jokes for {user_input}")
+	print(choice(results)["joke"])
+# Choice is an import feature from random to select a random result from the list of jokes
+
+elif number_of_jokes == 1:
+	print(f"There is only 1 Joke for {user_input}")
+	print(results[0]["joke"])
+# Within the results dict at the zeroth place containes the key joke and the value which we need inside of it
+
+else:
+	print(f"There are no jokes for {user_input}")
+ 
+
+</code></pre>
+
+
+
+<div class="contact"><p>The next code below is also a web scrapper except this uses Beautiful soup a plugin 
+which makes parsing easier. This one is a </p> <p>guessing game. The user gets a quote and has to guess who it is made by. They two clues prior to running out of them.</p></div>
+<pre><code>
+# http://quotes.toscrape.com/
 import requests 
-# we need tomake a request to the website above
+# We need to make a request to the website above
 from bs4 import BeautifulSoup 
 # We use bs4 in order to scrap the html
 from csv import writer
 # this allows us to extract and read scripts and write them/store to a new file
+from random import choice
+#This gives us a random quote from the list we scrapped 
+from csv import DictReader
+#This allows us to pull up the info in the file we created with the scrapper
 
-response = requests.get("https://www.rithmschool.com/blog")
 
-# This grabs the website
+base_url = "http://quotes.toscrape.com/"
 
-# print(response.text)
-# # This grabs the HTML of the specific webpage we input into get
 
-soup = BeautifulSoup(response.text, "html.parser")
-articles = soup.find_all("article")
-# In order to find all the article tages which coontain the titles
+def read_quotes(filename):
+	with open(filename, "r") as file:
+		csv_reader = DictReader(file)
+		return list(csv_reader)
 
-with open("blogdata.csv", "w") as csv_file:
-# This records all the data we scraped from the website into a new document that we are writting "w"
-	csv_writer = writer(csv_file)
-	csv_writer.writerow(["Title", "source", "Date"])
-	for article in articles:
-		a_tag = article.find("a")
-		title = a_tag.get_text()
-		url = a_tag["href"]
-		date = article.find("time")["datetime"]
-		csv_writer.writerow([title, url, date])</code>
+
+def start_game(quotes):
+	quote = choice(quotes)
+	print(quote["Text"])
+	print(quote["Author"])
+	remaining_guess = 4
+	guess = ''
+	while guess.lower() != quote["Author"].lower() and remaining_guess > 0:
+		guess = input(f"Who said this quote? Guesses remaining:{remaining_guess}")
+		remaining_guess = remaining_guess - 1
+		if guess.lower() == quote["Author"].lower():
+			print("Correct!")
+			break
+		elif remaining_guess == 3:
+			response = requests.get(f"{base_url}{quote['Bio_link']}")
+			#This will now go to the bio link and to grab our first hint
+			soup = BeautifulSoup(response.text, "html.parser")
+			birth_date = soup.find(class_ ="author-born-date").get_text()
+			birth_loc = soup.find(class_ ="author-born-location").get_text()
+			print(f"Here is a hint: This author was born on {birth_date} {birth_loc}")
+		elif remaining_guess == 2:
+			first_in = quote["Author"][0]
+			print(f"Hint2: The author's first name begins with {first_in}")
+		elif remaining_guess == 1:
+			last_in = quote["Author"].split(" ")[1][0]
+			print(f"Hint3: The author's last name begins with {last_in}")
+		else:
+			print(f"You ran out of hints, the awnser was {quote['Author']}")
+
+	again = ''
+	while again.lower() not in ('y', 'n', 'yes', 'no'):
+		again = input("Would you like to play again? (y/n) ")
+		if again.lower() in ('y', 'yes'):
+			print("Starting Game ....")
+			return start_game(quotes)
+		else:
+			print("Okay, Good Bye! ")
+
+quotes = read_quotes("quotes.csv")
+start_game(quotes)
+</code></pre>
 </div> <!-- col -->
 
+
+
+
 <div class="col-md-12 col-xs-12">
-<div class="titles">Here is some of my employment history:</div>
+<div class="titles">Here is some of my employment history & Certificates:</div>
 </div> <!-- col -->
 <div class="container"><center>
   <!-- Trigger the modal with a button -->
@@ -237,6 +328,101 @@ with open("blogdata.csv", "w") as csv_file:
   
 </div>
 </div>
+
+<div class="row">
+
+<div class="col-md-4 col-xs-12">
+	
+	<div class="container"><div class ='lead'><center>
+  <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">Web Dev Certificates</button></center></div> <!-- lead -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class='col-12 modal-title text-center'>Career Foundry</h4>
+        </div>
+        <div class="modal-body">
+         
+
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+  </div>
+</div>
+</div>
+</div> <!-- closes col -->
+<div class="col-md-4 col-xs-12">
+	<div class="container"><div class ='lead'><center>
+  <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">MySQL Certificates</button></center></div> <!-- lead -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class='col-12 modal-title text-center'>Cornato Vella Resume</h4>
+        </div>
+        <div class="modal-body">
+
+
+
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+  </div>
+</div>
+</div>
+</div> <!-- closes col -->
+<div class="col-md-4 col-xs-12">
+	<div class="container"><div class ='lead'><center>
+  <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">Python 3.6 Certificate</button></center></div> <!-- lead -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class='col-12 modal-title text-center'>Cornato Vella Resume</h4>
+        </div>
+        <div class="modal-body">
+ 
+
+
+
+
+ 
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+  </div>
+</div>
+</div>
+</div> <!-- closes col -->
+</div> <!-- row -->
 
 <div class="titles">Like what you see? Let's connect!</div>
 
