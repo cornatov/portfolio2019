@@ -1,183 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-	<meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>   
-	<script type="text/javascript" src="http://twitter.github.io/bootstrap/assets/js/bootstrap-transition.js"></script>
-	<script type="text/javascript" src="http://twitter.github.io/bootstrap/assets/js/bootstrap-collapse.js"></script>
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-
-
-
-
-    <!-- Custom styles for this template go here -->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <!-- Favicon -->
-    
-    
-    <!-- Stylesheets -->
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    
-
- 
-
-
-	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-	<link rel="shortcut icon" type="image/x-icon" sizes="32x32" href="/favicon-32x32.png">
-	<link rel="shortcut icon" type="image/x-icon" sizes="16x16" href="myIcon.ico" />
-	<link rel="manifest" href="/site.webmanifest">
-	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-	<meta name="msapplication-TileColor" content="#2d89ef">
-	<meta name="theme-color" content="#ffffff">
-
-
-  </head>
-  <body>
-	<!-- Main jumbotron for a primary marketing message or call to action -->
-		<nav id="nav" class="navbar fixed-top navbar-expand-sm" data-spy="affix">
-    <div class="container">
-     <a class="navbar-brand">Cornato Vella</a>
-        <a class="navbar-toggler" data-toggle="collapse" data-target=".navbar-collapse">☰</a>
-        <div class="navbar-collapse collapse">
-            <ul class="navbar-nav">
-            </ul>
-            <ul class="ml-auto navbar-nav">
-                
-                <a href="mailto:cornatov@buffalo.edu" button class="btn btn-outline-primary text-info">Say Hello!</a></button>
-                
-            </ul>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>   
+        <script type="text/javascript" src="http://twitter.github.io/bootstrap/assets/js/bootstrap-transition.js"></script>
+        <script type="text/javascript" src="http://twitter.github.io/bootstrap/assets/js/bootstrap-collapse.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        <!-- Custom styles for this template go here -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <!-- Favicon -->
+        <!-- Stylesheets -->
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="shortcut icon" type="image/x-icon" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="shortcut icon" type="image/x-icon" sizes="16x16" href="myIcon.ico" />
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#2d89ef">
+        <meta name="theme-color" content="#ffffff">
+    </head>
+    <body>
+        <!-- Main jumbotron for a primary marketing message or call to action -->
+        <nav id="nav" class="navbar fixed-top navbar-expand-sm" data-spy="affix">
+            <div class="container">
+                <a class="navbar-brand">Cornato Vella</a>
+                <a class="navbar-toggler" data-toggle="collapse" data-target=".navbar-collapse">☰</a>
+                <div class="navbar-collapse collapse">
+                    <ul class="navbar-nav">
+                    </ul>
+                    <ul class="ml-auto navbar-nav">
+                        <a href="mailto:cornatov@buffalo.edu" button class="btn btn-outline-primary text-info">Say Hello!</a></button>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="display-4">Mechanical/Software engineer & aspiring Entrepreneur</h1>
+                        <p class="lead"><strong>I enjoy simplifying complicated problems through web design, algorithms and prototypes</strong></p>
+                    </div>
+                    <!-- closes col -->
+                    <div class="col-md-12">
+                        <div class="movepic">
+                            <div class="propic"></div>
+                        </div>
+                        <!-- closes movepic -->
+                    </div>
+                    <!-- col -->
+                </div>
+                <!-- /container -->
+            </div>
+            <!-- col -->
         </div>
-    </div>
-</nav>
-	<div class="jumbotron jumbotron-fluid">
-
-
-		<div class="container">
-		<div class="row">
-
-	    <div class="col-md-12">
-			<h1 class="display-4">Mechanical/Software engineer & aspiring Entrepreneur</h1>
-			<p class="lead"><strong>I enjoy simplifying complicated problems through web design, algorithms and prototypes</strong></p>
-		</div> <!-- closes col -->
-
-		<div class="col-md-12">
-		<div class="movepic">
-		<div class="propic"></div>
-		</div> <!-- closes movepic -->
-		</div> <!-- col -->
-
-		</div><!-- /container -->
-	</div> <!-- col -->
-    </div> <!-- row -->
-	</div><!-- /jumbotron -->
-
-	<div class="container">
-	  <div class="row">
-	    <div class="col-sm-12">
-<div class="titles">Hello, My name is Ronnie</div>
-<div class="paras"><p>While working as an airworthiness engineer for General Atomics, a defense company, I enrolled in a web development boot camp and rediscovered my love of coding and problem solving. I enjoy creating physically and virtually (coding and 3D modeling). I also enjoy thinking up of inventions to real world problems such as pollution and alternative energy sources. I hope to have my own startup one day.</p></div> <!-- paras -->
-	    </div> <!-- col -->
-<div class="col-sm-12">
-<div class="titles">My Skills:</div>
-<p><center><i class="fab fa-html5 fa-5x" style="padding-left:10px;color:orange"></i><i class="fab fa-sass fa-5x" style="padding-left:10px;color:pink"></i><i class="fab fa-css3-alt fa-5x" style="padding-left:10px;color:blue"></i> <i class="fab fa-github fa-5x" style="padding-left:10px;"></i></p></center> 
-<p><center><i class="devicon-ruby-plain-wordmark colored fa-5x" style="padding-left:10px;"></i> <i class="devicon-rails-plain-wordmark colored fa-5x" style="padding-left:10px;"></i> <i class="devicon-python-plain-wordmark colored fa-5x" style="padding-left:10px;"></i> <i class="devicon-mysql-plain-wordmark colored fa-5x" style="padding-left:10px;"></i></p></center> 
-
-
-
-
-</div> <!-- col -->
-	</div> <!-- row -->
-</div> <!-- container -->
-
-<div class="titles">Below are some engineering projects I worked on:</div>
-
-<div class="row">
-    
-
-<div class="col-md-4 col-xs-12">
-    <a href="http://grow.buffalo.edu/"><div class="module1 top" data-toggle="tooltip" data-placement="bottom" title="Selected as 1 of 20 schools to participate in a DOE national sustainable house competition">
-    <h1>University at Buffalo's Solar Decathlon</h1>
-    </div></a>
-</div> <!--col-->
-
-
-<div class="col-md-4 col-xs-12">
-    <a href="https://www.buffalo.edu/ubnow/campus/campus-host-page.host.html/content/shared/university/news/ub-reporter-articles/stories/2015/05/microgravity.detail.html"><div class="module2 top" data-toggle="tooltip" data-placement="bottom" title="Design and build a specimen grabber for astronauts that utilizes singlehanded operations">
-    <h1>NASA Micro-G Next</h1>
-    </div></a>
-</div> <!--col-->
-
-
-
-
-
-<div class="col-md-4 col-xs-12">
-  <a href="https://ubnl.space/"><div class="module3 top" data-toggle="tooltip" data-placement="bottom" title="To design and build a small satellite ‘GLADOS’ to track space debri">
-  <h1>University at Buffalo's NANOSAT</h1>
-  </div></a>
-
-
-</div> <!--col-->
-
-
-</div>    
-<!--row-->
-<div class="titles">The following are websites I made:</div>
-
-<div class="row">
-    
-
-<div class="col-md-3 col-xs-12">
-    <a href="https://cornatoron.herokuapp.com/"><div class="module4 top" data-toggle="tooltip" data-placement="bottom" title="My first website portfolio I made last year">
-    <h1>My old Portfolio</h1>
-    </div></a>
-</div> <!--col-->
-
-
-<div class="col-md-3 col-xs-12">
-  <a href="https://bikesanfran.herokuapp.com/"><div class="module5 top" data-toggle="tooltip" data-placement="bottom" title="Online bike store that uses Stripe api to purchase products">
-  <h1>A bike Ecommerce store</h1>
-  </div></a>
-</div> <!--col-->
-
-
-
-
-
-<div class="col-md-3 col-xs-12">
-  <a href="https://cloudclo2.herokuapp.com/"><div class="module6 top" data-toggle="tooltip" data-placement="bottom" title="The Uber of clothing. Side project with friend.">
-  <h1>A startup idea landing page, Vestir</h1>
-  </div></a>
-</div> <!--col-->
-
-
-<div class="col-md-3 col-xs-12">
-  <a href="http://solardronekite.com/"><div class="module7 top" data-toggle="tooltip" data-placement="bottom" title="My own side project that needs more funding">
-  <h1>Search and rescue Solar Drone</h1>
-  </div></a>
-  </div> <!--col-->
-</div> <!-- row -->
-
-
-<<div class="row">
-<div class="col-md-12 col-xs-12">
-<div class="titles">Below is some Python 3.6 script:</div>
-</div> <!-- col -->
-<div class="col-md-12 col-xs-12">
-
-<div class="contact">The example below is off a web scrapper that returns dad jokes based of what the user inputs as a keyword</div>
-<pre><code>
+        <!-- row -->
+        </div><!-- /jumbotron -->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="titles">Hello, My name is Ronnie</div>
+                    <div class="paras">
+                        <p>While working as an airworthiness engineer for General Atomics, a defense company, I enrolled in a web development boot camp and rediscovered my love of coding and problem solving. I enjoy creating physically and virtually (coding and 3D modeling). I also enjoy thinking up of inventions to real world problems such as pollution and alternative energy sources. I hope to have my own startup one day.</p>
+                    </div>
+                    <!-- paras -->
+                </div>
+                <!-- col -->
+                <div class="col-sm-12">
+                    <div class="titles">My Skills:</div>
+                    <p>
+                    <center><i class="fab fa-html5 fa-5x" style="padding-left:10px;color:orange"></i><i class="fab fa-sass fa-5x" style="padding-left:10px;color:pink"></i><i class="fab fa-css3-alt fa-5x" style="padding-left:10px;color:blue"></i> <i class="fab fa-github fa-5x" style="padding-left:10px;"></i></p></center>
+                    <p>
+                    <center><i class="devicon-ruby-plain-wordmark colored fa-5x" style="padding-left:10px;"></i> <i class="devicon-rails-plain-wordmark colored fa-5x" style="padding-left:10px;"></i> <i class="devicon-python-plain-wordmark colored fa-5x" style="padding-left:10px;"></i> <i class="devicon-mysql-plain-wordmark colored fa-5x" style="padding-left:10px;"></i></p></center>
+                </div>
+                <!-- col -->
+            </div>
+            <!-- row -->
+        </div>
+        <!-- container -->
+        <div class="titles">Below are some engineering projects I worked on:</div>
+        <div class="row">
+            <div class="col-md-4 col-xs-12">
+                <a href="http://grow.buffalo.edu/">
+                    <div class="module1 top" data-toggle="tooltip" data-placement="bottom" title="Selected as 1 of 20 schools to participate in a DOE national sustainable house competition">
+                        <h1>University at Buffalo's Solar Decathlon</h1>
+                    </div>
+                </a>
+            </div>
+            <!--col-->
+            <div class="col-md-4 col-xs-12">
+                <a href="https://www.buffalo.edu/ubnow/campus/campus-host-page.host.html/content/shared/university/news/ub-reporter-articles/stories/2015/05/microgravity.detail.html">
+                    <div class="module2 top" data-toggle="tooltip" data-placement="bottom" title="Design and build a specimen grabber for astronauts that utilizes singlehanded operations">
+                        <h1>NASA Micro-G Next</h1>
+                    </div>
+                </a>
+            </div>
+            <!--col-->
+            <div class="col-md-4 col-xs-12">
+                <a href="http://ubnl.space/?page_id=302">
+                    <div class="module3 top" data-toggle="tooltip" data-placement="bottom" title="To design and build a small satellite ‘GLADOS’ to track space debri">
+                        <h1>University at Buffalo's NANOSAT</h1>
+                    </div>
+                </a>
+            </div>
+            <!--col-->
+        </div>
+        <!--row-->
+        <div class="titles">The following are websites I made:</div>
+        <div class="row">
+            <div class="col-md-3 col-xs-12">
+                <a href="https://cornatoron.herokuapp.com/">
+                    <div class="module4 top" data-toggle="tooltip" data-placement="bottom" title="My first website portfolio I made last year">
+                        <h1>My old Portfolio</h1>
+                    </div>
+                </a>
+            </div>
+            <!--col-->
+            <div class="col-md-3 col-xs-12">
+                <a href="https://bikesanfran.herokuapp.com/">
+                    <div class="module5 top" data-toggle="tooltip" data-placement="bottom" title="Online bike store that uses Stripe api to purchase products">
+                        <h1>A bike Ecommerce store</h1>
+                    </div>
+                </a>
+            </div>
+            <!--col-->
+            <div class="col-md-3 col-xs-12">
+                <a href="https://cloudclo2.herokuapp.com/">
+                    <div class="module6 top" data-toggle="tooltip" data-placement="bottom" title="The Uber of clothing. Side project with friend.">
+                        <h1>A startup idea landing page, Vestir</h1>
+                    </div>
+                </a>
+            </div>
+            <!--col-->
+            <div class="col-md-3 col-xs-12">
+                <a href="http://solardronekite.com/">
+                    <div class="module7 top" data-toggle="tooltip" data-placement="bottom" title="My own side project that needs more funding">
+                        <h1>Search and rescue Solar Drone</h1>
+                    </div>
+                </a>
+            </div>
+            <!--col-->
+        </div>
+        <!-- row -->
+        <
+        <div class="row">
+            <div class="col-md-12 col-xs-12">
+                <div class="titles">Below is some Python 3.6 script:</div>
+            </div>
+            <!-- col -->
+            <div class="col-md-12 col-xs-12">
+                <div class="contact">The example below is off a web scrapper that returns dad jokes based of what the user inputs as a keyword</div>
+                <pre><code>
 import requests
 from random import choice 
 from termcolor import colored 
@@ -225,12 +208,13 @@ else:
  
 
 </code></pre>
-
-
-
-<div class="contact"><p>The next code below is also a web scrapper except this uses Beautiful soup a plugin 
-which makes parsing easier. This one is a </p> <p>guessing game. The user gets a quote and has to guess who it is made by. They two clues prior to running out of them.</p></div>
-<pre><code>
+                <div class="contact">
+                    <p>The next code below is also a web scrapper except this uses Beautiful soup a plugin 
+                        which makes parsing easier. This one is a 
+                    </p>
+                    <p>guessing game. The user gets a quote and has to guess who it is made by. They two clues prior to running out of them.</p>
+                </div>
+                <pre><code>
 # http://quotes.toscrape.com/
 import requests 
 # We need to make a request to the website above
@@ -293,167 +277,83 @@ def start_game(quotes):
 quotes = read_quotes("quotes.csv")
 start_game(quotes)
 </code></pre>
-</div> <!-- col -->
-
-
-
-
-<div class="col-md-12 col-xs-12">
-<div class="titles">Here is some of my employment history & Certificates:</div>
-</div> <!-- col -->
-<div class="container"><center>
-  <!-- Trigger the modal with a button -->
-  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Click for Resume</button></center>
-
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class='col-12 modal-title text-center'>Cornato Vella Resume</h4>
+            </div>
+            <!-- col -->
         </div>
-        <div class="modal-body">
-         <iframe src="https://drive.google.com/file/d/1L7idNTDYwApCQEUZ46A9uP5IjBHD-Gld/preview" width="100%" height="480"></iframe>
+        <div class="col-md-12 col-xs-12">
+            <div class="titles">Here is some of my employment history & Certificates:</div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <!-- col -->
+        <div class="container">
+            <center>
+                <!-- Trigger the modal with a button -->
+                <button type="button" class="btn1 btn-info btn-lg" data-toggle="modal" data-target="#myModal">Click for Resume</button>
+            </center>
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class='col-12 modal-title text-center'>Cornato Vella Resume</h4>
+                        </div>
+                        <div class="modal-body">
+                            <iframe src="https://drive.google.com/file/d/1L7idNTDYwApCQEUZ46A9uP5IjBHD-Gld/preview" width="100%" height="480"></iframe>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      
-    </div>
-  </div>
-  
-</div>
-</div>
-
-<div class="row">
-
-<div class="col-md-4 col-xs-12">
-	
-	<div class="container"><div class ='lead'><center>
-  <!-- Trigger the modal with a button -->
-  <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">Web Dev Certificates</button></center></div> <!-- lead -->
-
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class='col-12 modal-title text-center'>Career Foundry</h4>
         </div>
-        <div class="modal-body">
-         
-
-
-
+        <div class="row">
+            <div class="col-md-4 col-xs-12">
+                <a href="https://drive.google.com/file/d/1bO5WElm_T-Qb5drLJokuXMJVePUwkci7/preview">
+                    <div class="module8 top">
+                    </div>
+                </a>
+            </div>
+            <!--col-->
+            <div class="col-md-4 col-xs-12">
+                <a href="https://drive.google.com/file/d/1PtI7UKov4NjqcEEJHCmd9M7k_Edizsmb/preview">
+                    <div class="module9 top">
+                    </div>
+                </a>
+            </div>
+            <!--col-->
+            <div class="col-md-4 col-xs-12">
+                <a href="https://drive.google.com/file/d/1zKoNrvfobfqBU1CxJm3x0d_d0awssMZ0/preview">
+                    <div class="module10 top">
+                    </div>
+                </a>
+            </div>
+            <!--col-->
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <div class="titles">Like what you see? Let's connect!</div>
+        <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-xs-12">
+                    <div class="contact">Mobile:  <i class="fa fa-phone"> </i>  (347)-963-0048</a></div>
+                    <div class="contact">Email:  <i class="fa fa-envelope"> </i> cornatov@buffalo.edu</div>
+                    <div class="contact"><a class="devicon-facebook-plain colored fa-5x" href="https://www.facebook.com/cornatov"></a>
+                        <a class="devicon-github-plain colored fa-5x" href="https://github.com/cornatov"></a>
+                        <a class="fab fa-linkedin fa-5x" href="https://www.linkedin.com/in/cornatov/"></a>
+                    </div>
+                </div>
+                <!-- /col -->
+            </div>
+            <!-- /row -->
         </div>
-      </div>
-  </div>
-</div>
-</div>
-</div> <!-- closes col -->
-<div class="col-md-4 col-xs-12">
-	<div class="container"><div class ='lead'><center>
-  <!-- Trigger the modal with a button -->
-  <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">MySQL Certificates</button></center></div> <!-- lead -->
-
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class='col-12 modal-title text-center'>Cornato Vella Resume</h4>
-        </div>
-        <div class="modal-body">
-
-
-
-
-
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-  </div>
-</div>
-</div>
-</div> <!-- closes col -->
-<div class="col-md-4 col-xs-12">
-	<div class="container"><div class ='lead'><center>
-  <!-- Trigger the modal with a button -->
-  <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">Python 3.6 Certificate</button></center></div> <!-- lead -->
-
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class='col-12 modal-title text-center'>Cornato Vella Resume</h4>
-        </div>
-        <div class="modal-body">
- 
-
-
-
-
- 
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-  </div>
-</div>
-</div>
-</div> <!-- closes col -->
-</div> <!-- row -->
-
-<div class="titles">Like what you see? Let's connect!</div>
-
-	    	<div id="contact">
-  <div class="container">
-
-    <div class="row">
-      <div class="col-md-12 col-xs-12">
-
-        
-          <div class="contact">Mobile:  <i class="fa fa-phone"> </i>  (347)-963-0048</a></div>
-          <div class="contact">Email:  <i class="fa fa-envelope"> </i> cornatov@buffalo.edu</div>
-          <div class="contact"><a class="devicon-facebook-plain colored fa-5x" href="https://www.facebook.com/cornatov"></a>
-          <a class="devicon-github-plain colored fa-5x" href="https://github.com/cornatov"></a>
-          <a class="fab fa-linkedin fa-5x" href="https://www.linkedin.com/in/cornatov/"></a></div>
-
-
-
-      
-    
-		</div><!-- /col -->
-	    
-	  </div><!-- /row -->
-	</div> <!-- /container -->
-
-
-    <!-- ============================= -->
-    <!-- All your JavaScript comes now -->
-    <!-- ============================= -->
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-</body>
+        <!-- /container -->
+        <!-- ============================= -->
+        <!-- All your JavaScript comes now -->
+        <!-- ============================= -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    </body>
 </html>
