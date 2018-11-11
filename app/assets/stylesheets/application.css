@@ -13,6 +13,8 @@
  *= require_tree .
  *= require_self
  */
+
+ /*buttons*/
 .btn {
   background-color: #32ace5;
   border-color:#528B8B;
@@ -25,11 +27,11 @@
     color: #528B8B;
 }
 
-body{
-	background-color:#528B8B;
-}
+
+/*buttons*/
 
 
+/*splashpage*/
 .jumbotron body {
   width: 100%;
   max-width: 400px;
@@ -52,20 +54,17 @@ body{
  background-position: center;
  background-repeat: no-repeat;
  background-size: cover;
- padding-bottom: 50%;
+ padding-bottom: 45%;
  overflow: hidden;
 
 }
 
+/*splashpage*/
 
 
-
-.display-4 {
-	margin-top: 6%;
-  
-  padding-left: 50%;
+body{
+	background-color:#528B8B;
 }
-
 
 
 
@@ -79,18 +78,7 @@ body{
   transition:padding 0.2s ease-out;
 }
 
-@media (min-width:768px) {
-    .affix-top {
-      /* navbar style at top */
-      background-color:transparent;
-      border-color:transparent;
-      padding: 15px;
-      -webkit-transition:all 0.5s ease;
-      -moz-transition:all 0.5s ease; 
-      -o-transition:all 0.5s ease;         
-      transition:all 0.5s ease;  
-    }
-}
+/*navigation bar*/
 
 nav .navbar-nav .nav-link {
 	color: #000;
@@ -107,17 +95,14 @@ nav .navbar-brand {
 
 }
 
+/*navigation bar*/
 
-.display-4 {
-  padding-left: 150px;
-  font-size: 30px;
-  font-family: 'Fredoka One', cursive;
-}
+/*font formatts*/
 
 .lead {
   
   padding-top: 3%;
-  font-size: 1.1em;
+  font-size: .9em;
   text-align: center;
   font-weight: bold;
 }
@@ -133,6 +118,7 @@ nav .navbar-brand {
 .contact {
  
   padding-top: 3%;
+  padding-bottom: 4%;
   font-size: 1.1em;
   text-align: center;
   font-weight: bold;
@@ -150,33 +136,14 @@ nav .navbar-brand {
 
 }
 
-
-@media (min-width: 768px) {
-  .modal-button button {
-    float: right;
-  }
-}
-
-
-#modalembed {
-  height: 500px;
-  width: 100%;
-}
+/*font formatts*/
 
 
 
 
-/*my work area*/
 
 
-.img-rounded {
-  max-width: 100%;
-  height: auto;
-  display:block;
-}
-
-
-
+/*projects tiles*/
 
 .module1 {
   background: 
@@ -408,6 +375,10 @@ nav .navbar-brand {
   margin-bottom: 130px;
 }
 
+/*projects tiles*/
+
+/*icons in contact me*/
+
 .fa-facebook {
   background: #3B5998;
   color: white;
@@ -427,6 +398,10 @@ nav .navbar-brand {
   font-style: normal;
 }
 
+/*icons in contact me*/
+
+/*code snippets*/
+
 
 pre, code{
      direction: ltr;
@@ -443,8 +418,29 @@ pre {border: solid 1px black;
 code {font-size:1.2em; 
      color: #008099}
 
+/*code snippets*/
+
 
 /*making site responsive*/
+
+@media (min-width: 768px) {
+  .modal-button button {
+    float: right;
+  }
+}
+
+@media (min-width:768px) {
+    .affix-top {
+      /* navbar style at top */
+      background-color:transparent;
+      border-color:transparent;
+      padding: 15px;
+      -webkit-transition:all 0.5s ease;
+      -moz-transition:all 0.5s ease; 
+      -o-transition:all 0.5s ease;         
+      transition:all 0.5s ease;  
+    }
+}
 
 
 
