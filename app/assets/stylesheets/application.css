@@ -31,8 +31,9 @@ body{
 
 
 .jumbotron body {
-  height: 100%;
   width: 100%;
+  max-width: 400px;
+  height: auto;
   overflow: hidden;
   background: #2f294f;
   margin: 0;
@@ -40,25 +41,26 @@ body{
 
 
 
+
+
+
+
 .jumbotron {
- background: url(splashpic.jpg) fixed center no-repeat;
+ background-image: url(splashpic.jpg);
+ background-attachment: fixed;
+ background-position: center;
+ background-repeat: no-repeat;
  background-size: cover;
- height: 100vh;
+ padding-bottom: 50%;
 }
+
 
 .display-4 {
 	margin-top: 50px;
 }
 
 
-.propic {
-	background: url(me.png) no-repeat;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    margin-top: 50px;
 
-}
 
 .movepic {
   margin-left: 470px;
@@ -444,3 +446,6 @@ pre {border: solid 1px black;
      background: black}
 code {font-size:1.2em; 
      color: #008099}
+
+
+/*making site responsive*/
